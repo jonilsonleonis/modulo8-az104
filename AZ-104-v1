@@ -1,0 +1,51 @@
+Azure Active Directory (Entra ID), Load Balancer e Virtual Machines, voltados para aplicação prática e documentação técnica clara.
+
+Entra ID (Azure Active Directory)
+Resumo:
+É o serviço de gerenciamento de identidades e acesso na nuvem da Microsoft.
+Suporta autenticação multifator, logon único (SSO) e integração com serviços como Microsoft 365, SaaS, e aplicações personalizadas.
+Permite definir políticas de acesso condicional e proteger recursos com base no risco e contexto.
+
+Dicas:
+Use Grupos Dinâmicos para automatizar a associação de usuários a grupos com base em atributos (por exemplo, departamento).
+Ative MFA (Autenticação Multifator) para contas privilegiadas por padrão.
+Audite e revise permissões periodicamente com a ferramenta "Access Reviews".
+
+Aplicações práticas:
+Configurar acesso de colaboradores ao portal Azure com base em seus papéis.
+Documentar permissões atribuídas por grupo, com justificativas e revisões trimestrais.
+
+Azure Load Balancer
+Resumo:
+Distribui o tráfego de rede de entrada entre instâncias de VM, aumentando a escalabilidade e disponibilidade.
+Dois tipos principais: Public Load Balancer (exposição à Internet) e Internal Load Balancer (uso interno em redes privadas).
+Trabalha com regras de balanceamento baseadas em portas, protocolos e sondas de integridade (health probes).
+
+Dicas:
+Use Health Probes com intervalos curtos e tempos de resposta ajustados para detectar rapidamente falhas.
+Combine com NSG (Network Security Groups) para controlar acesso externo às instâncias.
+Log todas as alterações no Load Balancer com Azure Monitor e Activity Logs.
+
+Aplicações práticas:
+Criar um diagrama com fluxos de rede e regras configuradas.
+Registrar parâmetros de sonda, como protocolo e porta, e quando foram testados.
+
+Virtual Machines (VMs)
+Resumo:
+Instâncias de computação em nuvem que oferecem controle total sobre o sistema operacional.
+Suporta múltiplos SOs, tamanhos de VM, armazenamento e redes virtuais.
+Ideal para aplicações legadas, ambientes de teste e serviços que exigem controle completo.
+
+Dicas:
+Use Managed Disks para facilitar backups e replicações.
+Configure Availability Sets ou Zonas de Disponibilidade para alta disponibilidade.
+Automatize tarefas com Azure Automation (como shutdown fora do horário comercial).
+
+Aplicações práticas:
+Documentar configurações da VM: tamanho, SO, discos, IPs, NSGs vinculados.
+Criar um checklist de pós-criação da VM (antivírus, atualizações, backups configurados).
+
+Sugestões para Documentação Técnica
+Crie templates de documentação para cada recurso (VM, Load Balancer, Entra ID).
+Registre: objetivo do recurso, data de criação, responsável, permissões atribuídas, integrações e logs relevantes.
+Mantenha toda documentação em repositório versionado (ex: SharePoint ou Git interno).
